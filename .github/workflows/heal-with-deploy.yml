@@ -39,7 +39,7 @@ jobs:
 
       - name: Upload build output
         if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build_output
           path: build_output.txt
@@ -57,7 +57,7 @@ jobs:
           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
 
       - name: Download build output
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: build_output
 
